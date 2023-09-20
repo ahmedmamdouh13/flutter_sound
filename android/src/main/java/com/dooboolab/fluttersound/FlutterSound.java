@@ -38,6 +38,9 @@ public class FlutterSound
 	public void onAttachedToEngine ( FlutterPlugin.FlutterPluginBinding binding )
 	{
 		this.pluginBinding = binding;
+
+		FlutterSoundPlayerManager.attachFlautoPlayer ( Flauto.androidContext, pluginBinding.getBinaryMessenger () );
+		FlutterSoundRecorderManager.attachFlautoRecorder ( Flauto.androidContext, pluginBinding.getBinaryMessenger () );
 	}
 
 
